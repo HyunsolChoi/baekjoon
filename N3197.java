@@ -73,7 +73,7 @@ public class N3197 {
 					if (!visit[row + dy[w]][col + dx[w]] && lake[row + dy[w]][col + dx[w]] == '.') {
 						ls.add(new Pos(row + dy[w], col + dx[w]));
 						visit[row + dy[w]][col + dx[w]] = true;
-					} else if (lake[row + dy[w]][col + dx[w]] == 'L') {
+					} else if (!visit[row + dy[w]][col + dx[w]] && lake[row + dy[w]][col + dx[w]] == 'L') {
 						found = true;
 						break;
 					}
